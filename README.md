@@ -28,7 +28,7 @@ WORKDIR .
 
 COPY . .
 
-EXPOSE 5000
+EXPOSE 5001
 
 CMD ["python3", "main.py"]
 ```
@@ -52,5 +52,5 @@ docker image ls flask_docker
 ## Run Flask App in Docker
 Now with the `Dockerfile` and the image successfully built, we are ready to deploy the Flask app with the following line: `docker container run -p docker_port:your_port project_directory`
 ```
-docker container run -p 5000:5000 flask_docker:latest
+docker container run -p 5001:5001 flask_docker:latest
 ```
